@@ -20,7 +20,7 @@ const Login = () => {
         } else {
             // Unsuccessful login
             setError('Login failed, please try again');
-            navigate('/loginUnsuccessful')
+            navigate('/loginUnsuccessful', { state: { error:"Check your details and give it another go."}})
             return;
         }
 

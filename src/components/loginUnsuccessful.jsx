@@ -1,11 +1,15 @@
 
 import React from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './login.css';
 
 const LoginFailed = () => {
-   
     const navigate = useNavigate();
+    const location = useLocation();
+    const { state } = location;
+
+    // Destructure error from state
+    const { error } = state || {};
 
    
 
@@ -18,10 +22,9 @@ const LoginFailed = () => {
     return (
         <div className="container">
             <div className="failed">
-                <h1>Login Failed</h1>
+                <h1>Oops! Artistic License Denied 🚫 </h1>
                 <div class="error-message">
-                    <p>Oops! Artistic License Denied 🚫 </p>
-                    <p>Check your details and give it another go.</p>
+                    {error}
                 </div>
 
                 <button onClick={handleBackToLogin}>
