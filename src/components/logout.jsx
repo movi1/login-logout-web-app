@@ -1,23 +1,25 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './logout.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+import './login.css';
 
-// Logout component: Handles user logout and redirects to the home page
-export const Logout = () => {
-  // Get navigation function from react-router-dom
+const Logout = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { state } = location;
 
-  // Logout function: Implement actual logout logic here
   const handleLogout = () => {
-    // Redirect to the home page after logout
+    // Your logout logic, if needed
     navigate('/');
   };
 
-  // Render the logout component UI
   return (
-    <div className='logout'>
-      <h1>Welcome! You are logged in.</h1>
-      <button onClick={handleLogout}>Sign out</button>
+    <div className="container">
+      <div className="logout">
+        <h1>Welcome back🎨 {state && state.username}!</h1>
+        <button onClick={handleLogout}>Back to Login</button>
+      </div>
     </div>
   );
 };
+
+export default Logout;
