@@ -11,6 +11,7 @@
   transform: translate(-50%, -50%);
   height: 50%;
   width: 30%; 
+
   background: linear-gradient(135deg, #7f8385, #c4c4c4);
   border-radius: 10px; /* Rounded corners */
 }
