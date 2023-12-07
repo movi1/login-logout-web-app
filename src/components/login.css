@@ -49,10 +49,18 @@
 .logout h1,
 .failed h1 {
   font-family: "Comic Neue", cursive;
-  font-size: 28px;
+  font-size: 30px;
   color: #22333B;
   margin-bottom: 20px;
   text-align: center;
+}
+.logout h2 {
+  font-family: "Comic Neue", cursive;
+  font-size: 24px;
+  color: #22333B;
+  margin-bottom: 20px;
+  text-align: center;
+
 }
 
 /* Input styling for login */
