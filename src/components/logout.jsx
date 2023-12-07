@@ -21,9 +21,10 @@ const Logout = () => {
       <div className="container">
         <div className="logout">
           {/* Display a welcome message with the username */}
-          <h1>Welcome back🎨 {state && state.username}!</h1>
+          <h1>Welcome 🎨 {state && state.username}!</h1>
+          <h2>Click to the button below to sign out</h2>
           {/* Button to navigate back to the login page */}
-          <button onClick={handleLogout}>Back to Login</button>
+          <button onClick={handleLogout}>Sign Out</button>
         </div>
       </div>
     </div>

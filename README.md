@@ -38,13 +38,13 @@ This project is a simple React web application that demonstrates a basic login a
 ## Login page
 ![Log in](https://imgur.com/nHJCHSc.jpg)
 ## Log out page
-![Log out](https://imgur.com/CLzhrwi.jpg)
+![Log out](https://imgur.com/H9B9EZW.jpg)
 ## Login failed page
 ![Login failed](https://imgur.com/MAH6n32.jpg)
 
 # video Demo 
 
 
-[![Watch the video]](https://youtu.be/foyP3nwDeeg)
+[![Watch the video]](https://youtu.be/vgLp1LF0KQo)
 
 Click the image above to watch a video demonstration of the Login-Logout Web App.
