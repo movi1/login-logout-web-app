@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import 'animate.css';
 import './login.css';
 
@@ -12,18 +13,22 @@ const Login = () => {
 
     // React Router hook for navigation
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     // Function to handle the login process
     const handleLogin = () => {
         // logic to check username and password
         if (username === 'movi' && password === '1234') {
             // Successful login, navigate to the logout page
-            navigate('/logout', { state: { username } });
+            dispatch({ type: 'LOGIN', payload: username });
+            navigate('/logout');
         } else {
             // Unsuccessful login, set error message and navigate to loginUnsuccessful page
             setError('Login failed, please try again');
-            navigate('/loginUnsuccessful', { state: { error: "Check your details and give it another go." } })
-            return;
+            navigate('/loginUnsuccessful', {
+           state: { error: "Check your details and give it another go." },
+         });
+        
         }
 
         // Clear input fields after login attempt
