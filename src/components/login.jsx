@@ -2,8 +2,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { LOGIN } from '../store';
 import 'animate.css';
 import './login.css';
+
+
+
 
 const Login = () => {
     // State variables for managing username, password, and error message
@@ -20,15 +24,15 @@ const Login = () => {
         // logic to check username and password
         if (username === 'movi' && password === '1234') {
             // Successful login, navigate to the logout page
-            dispatch({ type: 'LOGIN', payload: username });
+            dispatch({ type: LOGIN, payload: username });
             navigate('/logout');
         } else {
             // Unsuccessful login, set error message and navigate to loginUnsuccessful page
             setError('Login failed, please try again');
             navigate('/loginUnsuccessful', {
-           state: { error: "Check your details and give it another go." },
-         });
-        
+                state: { error: "Check your details and give it another go." },
+            });
+
         }
 
         // Clear input fields after login attempt
@@ -47,13 +51,12 @@ const Login = () => {
             <div className="container animate__animated animate__fadeInDown">
                 <div className='login'>
                     <h1>✨Explore, Create, and Log in!</h1>
-                    {/* Username input field */}
+
                     <input
                         type="text"
                         placeholder="Username"
                         value={username}
                         onChange={(e) => { setUsername(e.target.value); handleInputChange(); }} />
-                    {/* Password input field */}
                     <input
                         type="password"
                         placeholder="Password"

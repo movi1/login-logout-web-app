@@ -1,6 +1,9 @@
 
 import { createStore } from 'redux';
 
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
 const initialState = {
   loggedInUser: null,
 };
