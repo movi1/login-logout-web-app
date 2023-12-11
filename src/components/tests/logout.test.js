@@ -20,5 +20,4 @@ describe('Logout', () => {
     expect(screen.getByText('Click to the button below to sign out')).toBeInTheDocument();
   });
 
-  // Add more test cases as needed
 });
